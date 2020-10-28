@@ -17,5 +17,5 @@
 
  <?php
 	foreach($data as $image) {
-		echo '<img class="img-hidden" id="full_'.$image->image_id.'" src="'.$image->image_url.'" alt="'.$image->image_title.'">';
+		echo '<img class="img-hidden" id="full_'.$image->image_id.'" src="ressources/dummy.png" alt="'.$image->image_url.'" alt="'.$image->image_title.'">';
 	}

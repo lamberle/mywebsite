@@ -12,6 +12,9 @@ class SiteController extends Controller {
 		$this->render("index");
 	}
 
+	public function resume() {
+		$this->render("resume");
+	}
 	public function register() {
 		if(isset(parameters()['register'])) {
 			if(!empty(parameters()['pseudo']) && !empty(parameters()['email']) && !empty(parameters()['password'])) {
