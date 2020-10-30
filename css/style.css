@@ -113,6 +113,7 @@ body {
 
 /* Style navigation menu links */
 .topnav a {
+  font-family: 'Bowlby One SC', cursive;
   color: white;
   padding: 14px 16px;
   text-decoration: none;
@@ -137,6 +138,7 @@ body {
 
 /* Style the active link (or home/logo) */
 .active {
+  font-family: 'Bowlby One SC', cursive;
   background-color: #005878;
   color: white;
 }
