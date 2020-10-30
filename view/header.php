@@ -23,16 +23,24 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script type="text/javascript">
 		function myFunction() {
-		  var x = document.getElementById("myTopnav");
-		  if (x.className === "topnav") {
-		    x.className += " responsive";
+		  var x = document.getElementById("myLinks");
+		  if (x.style.display === "block") {
+		    x.style.display = "none";
 		  } else {
-		    x.className = "topnav";
+		    x.style.display = "block";
 		  }
 		}
 	</script>
 </head>
 <body>
+	<?php
+		$options = [
+		    "site" => "About",
+		    "album" => "Albums",
+		    "image" => "Images",
+		    "site/resume" => "Experiences",
+		];
+	?>
 	<div class="rzm_profile_nav">
            <div class="sticky">
 	           	<div class="logo">
@@ -42,13 +50,7 @@
 	          	<div class="main-menu">
 	              <ul class="primary">
 	           		<?php
-	           			$array = [
-						    "site" => "About",
-						    "album" => "Albums",
-						    "image" => "Images",
-						    "site/resume" => "Experiences",
-						];
-						foreach ($array as $key => $value) {
+						foreach ($options as $key => $value) {
 							if(isset(parameters()["r"]) && parameters()["r"] == $key){
 								$style = "color:#00bbcc";
 							} else {
@@ -69,5 +71,26 @@
         </div>
     
     </div>
+ <!-- MOBILE MENU -->
+	<div class="topnav">
+	  <a href="#home" class="active">Léo LAMBERT</a>
+	  <!-- Navigation links (hidden by default) -->
+	  <div id="myLinks">
+   		<?php
+			foreach ($options as $key => $value) {
+				if(isset(parameters()["r"]) && parameters()["r"] == $key){
+					$style = "color:#00bbcc";
+				} else {
+					$style="";
+				}
+				echo '<a href="?r='.$key.'" style="'.$style.'"">'.$value.'</a>';
+			}
+		?>
+	  </div>
+	  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+	    <i class="fa fa-bars"></i>
+	  </a>
+	</div>
 
 	<div class='container theme-showcase' role='main'>

@@ -17,8 +17,7 @@ class Controller {
 			        strpos($controller, "Controller"));
 		$data = $d;
 		include_once "view/".strtolower($model)."/".$view.".php";
-		if($full)
-			include_once "view/footer.php";
+		include_once "view/footer.php";
 	}
 
 }
