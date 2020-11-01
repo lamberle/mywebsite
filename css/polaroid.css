@@ -10,16 +10,22 @@
   height: auto;
 }
 .caption {
-  font-family: 'Poor Story', cursive;
+  font-family: 'Indie Flower', cursive;
   font-size: 1.8rem;
   text-align: center;
   line-height: 2em;
+  opacity: 0%;
+  transition:opacity 0.8s
 }
+
 .item {
+  margin-top: 0px;
+  margin-bottom: 0px;
   width: 30%;
   display: inline-block;
   margin-top: 2rem;
   filter: grayscale(100%);
+  min-width:80%;
 }
 .item .polaroid:before {
   content: '';
@@ -79,6 +85,10 @@
   filter: none;
   transform: scale(1, 1) rotate(0deg) !important;
   transition: all 0.35s;
+}
+.item:hover .caption {
+opacity:100%;
+transition:opacity 0.5s
 }
 .item:hover .polaroid:before {
   content: '';

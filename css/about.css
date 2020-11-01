@@ -1,0 +1,28 @@
+.about-section {
+	display: flex;
+}
+.place-holder {
+	width:50%;height: 20vh;
+}
+@media (max-width:767px) {
+	.about-section {
+		display: block;
+	}
+	.place-holder {
+	width:0%;height: 0vh;
+}
+.following-section {
+	margin-top: -50px;
+}
+}
+.about-text {
+  font-family: 'Poor Story', cursive;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2em;
+}
+@media (min-width:767px) {
+.following-section {
+	margin-top: -150px;
+}
+}
