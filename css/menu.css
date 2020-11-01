@@ -80,31 +80,31 @@
  	opacity: 40%;
 	 background-color: #fff;
 	 border-radius: 1px;
-	 height: 6px;
-	 width: 170%;
+	 height: 10px;
+	 width: 185%;
 	 position: absolute;
  	 left: 50%;
 	 top: 0%;
 	 z-index: 102;
-	 margin: -4px 0 0 -27px;
+	 margin: -8px 0 0 -29px;
 	 transition: height 100ms;
 }
  .menuBtn > span:after, .menuBtn > span:before {
 	 content: '';
 	 background-color: #fff;
 	 border-radius: 1px;
-	 height: 6px;
+	 height: 10px;
 	 width: 100%;
 	 position: absolute;
 	 left: 50%;	
-	 margin-left: -26px;
+	 margin-left: -28px;
 	 transition: all 200ms;
 }
  .menuBtn > span:after {
-	 top: -13px;
+	 top: -16px;
 }
  .menuBtn > span:before {
-	 bottom: -13px;
+	 bottom: -16px;
 }
  .menuBtn.act > span {
 	 height: 0;
