@@ -1,5 +1,3 @@
 ressources/images
 ressources/previews
-db.php
-model/Model.php
-model/Album.php
+constants.php
