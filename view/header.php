@@ -13,6 +13,7 @@
 	<link rel="shortcut icon" href="ressources/leo_logo.png" type="image/x-icon"/>
 	<title>Léo Lambert</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	<link rel="stylesheet" type="text/css" href="./css/menu.css" />
 	<link rel="stylesheet" type="text/css" href="./css/polaroid.css" />
 	<link rel="stylesheet" type="text/css" href="./css/about.css" />
 	<?php
@@ -26,14 +27,18 @@
 	<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script type="text/javascript">
-		function myFunction() {
-		  var x = document.getElementById("myLinks");
-		  if (x.style.display === "block") {
-		    x.style.display = "none";
-		  } else {
-		    x.style.display = "block";
-		  }
-		}
+		$(document).ready(function(){
+			// menu click event
+			$('.menuBtn').click(function() {
+				$(this).toggleClass('act');
+					if($(this).hasClass('act')) {
+						$('.mainMenu').addClass('act');
+					}
+					else {
+						$('.mainMenu').removeClass('act');
+					}
+			});
+		});
 	</script>
 </head>
 <body>
@@ -76,10 +81,12 @@
     
     </div>
  <!-- MOBILE MENU -->
-	<div class="topnav">
-	  <a href="?r=site" class="active" style="font-size: 22px;padding: 7px;">Léo LAMBERT</a>
-	  <!-- Navigation links (hidden by default) -->
-	  <div id="myLinks">
+<a href="#" class="menuBtn">
+	<img src="ressources/profile5.png" alt="profile_photo" class="img-circle mobile-menu">
+	<span class="lines" style="top:90px;"></span>
+</a>
+<nav class="mainMenu">
+	<ul>
    		<?php
 			foreach ($options as $key => $value) {
 				if(isset(parameters()["r"]) && parameters()["r"] == $key){
@@ -87,14 +94,10 @@
 				} else {
 					$style="";
 				}
-				echo '<a href="?r='.$key.'" style="'.$style.'"">'.$value.'</a>';
+				echo '<li><a href="?r='.$key.'" style="'.$style.'"">'.$value.'</a></li>';
 			}
 		?>
-	  </div>
-	  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-	    <i class="fa fa-bars"></i>
-	  </a>
-	</div>
+	</ul>
+</nav>
 
 	<div class='container theme-showcase' role='main'>
