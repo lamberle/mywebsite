@@ -13,22 +13,22 @@ class Model {
 		if ($id == null) {
 			
 			$sql = "insert into `$table` () values ()";
-			$st = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+			$st = db_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.db_error());
 			$sql = "select max($table"."_id) as $table"."_id from `$table`";
-			$st = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
-			$row = mysql_fetch_assoc($st);
+			$st = db_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.db_error());
+			$row = db_fetch_assoc($st);
 			$field = $table."_id";
 			$this->$field = $row[$field];
 		} else {
 			
 			$sql = "select * from `$table` where $table"."_id=$id";
-			$st = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+			$st = db_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.db_error());
 
 			if (mysql_num_rows($st) != 1) {
 				throw new Exception("Not in table: ".$table." id: ".$id );
 			} else {
 				
-				$row = mysql_fetch_assoc($st);
+				$row = db_fetch_assoc($st);
 				foreach($row as $field=>$value) {
 					if($field == $table."_id") {
 						$id = $table."_id";
@@ -60,10 +60,10 @@ class Model {
 		$class = get_called_class();
 		$table = strtolower($class);
 		$sql = "select $table"."_id from `$table` $orderby";
-		$st = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+		$st = db_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.db_error());
 
 		$list = array();
-		while($row = mysql_fetch_assoc($st)) {
+		while($row = db_fetch_assoc($st)) {
 			$list[] = new $class($row[$table."_id"]);
 		}
 		return $list;
@@ -74,9 +74,9 @@ class Model {
 		$sql = "select $table"."."."$table"."_id from $table ".$condition;
 		if($distinct)
 			$sql = "select distinct $table"."."."$table"."_id from `$table` ".$condition;
-		$st = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+		$st = db_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.db_error());
 		$list = array();
-		while($row = mysql_fetch_assoc($st)) {
+		while($row = db_fetch_assoc($st)) {
 			$list[] = new $class($row[$table."_id"]);
 		}
 		return $list;
@@ -85,8 +85,8 @@ class Model {
 		$class = get_called_class();
 		$table = strtolower($class);
 		$sql = "select count(*) as nb from `$table` ".$option;
-		$st = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
-		return mysql_fetch_assoc($st)['nb'];
+		$st = db_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.db_error());
+		return db_fetch_assoc($st)['nb'];
 	}
 	
 	
@@ -94,10 +94,10 @@ class Model {
 		$class = get_called_class();
 		$table = strtolower($class);
 		$sql = "select $table"."_id from `$table` where $table"."_id=".$id;
-		$st = mysql_query($sql);
-		if(!($st = mysql_query($sql)))
+		$st = db_query($sql);
+		if(!($st = db_query($sql)))
 							throw new Exception("Erreur sql : ".$sql);
-		return new $class(mysql_fetch_assoc($st)[$table."_id"]);
+		return new $class(db_fetch_assoc($st)[$table."_id"]);
 	}
 
 
@@ -129,7 +129,7 @@ class Model {
 				$idtable = $table."_id";
 				if (is_object($value)) {
 					$sql = "update `$table` set $table"."_id$fieldName=".$value->$id." where $table"."_id=".$this->$idtable;
-					mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+					db_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.db_error());
 				} else {
 					$id = $table."_id";
 					
@@ -141,7 +141,7 @@ class Model {
 							$sql = "update `$table` set $fieldName='$value' where $table"."_id=".$this->$id;		
 						}
 						if(isset($sql))
-							if(!mysql_query($sql))
+							if(!db_query($sql))
 								throw new Exception("Erreur sql : ".$sql);
 				}
 				$id = "id".$table;
@@ -154,7 +154,7 @@ class Model {
 		$table = strtolower($class);
 		$id=$table."_id";
 		$sql = "delete from `$table` where $table"."_id=".$this->$id;
-		if(!mysql_query($sql)) {
+		if(!db_query($sql)) {
 			throw new Exception();
 		}
 	}
@@ -162,7 +162,7 @@ class Model {
 		$class = get_called_class();
 		$table = strtolower($class);
 		$sql = "delete from `$table` where 1";
-		if(!mysql_query($sql)) {
+		if(!db_query($sql)) {
 			throw new Exception();
 		}
 	}
