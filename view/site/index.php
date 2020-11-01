@@ -1,6 +1,20 @@
-</div>
-<img src="ressources/banner1.png" alt="banner" class="banner">
-<h1 class="banner-title">Léo LAMBERT</h1>
+<div class="item">
+    <div class="polaroid"><img src="ressources/IMG_2137_2.jpg">
+      <div class="caption">I Miss London</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="polaroid"><img src="ressources/IMG_0984.jpg">
+      <div class="caption">Léo LAMBERT</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="polaroid"><img src="ressources/IMG_1380.jpg">
+      <div class="caption">Summer Day</div>
+    </div>
+  </div>
 
 
 <?php
