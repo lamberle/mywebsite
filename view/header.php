@@ -55,6 +55,7 @@
 	           	<div class="logo">
 	            	<img src="ressources/profile5.png" alt="profile_photo" class="img-circle">
 	           	</div>
+
              <!-- Start primary navigation -->
 	          	<div class="main-menu">
 	              <ul class="primary">
@@ -83,7 +84,7 @@
  <!-- MOBILE MENU -->
 <a href="#" class="menuBtn">
 	<img src="ressources/profile5.png" alt="profile_photo" class="img-circle mobile-menu">
-	<span class="lines" style="top:90px;"></span>
+	<span class="lines" style="top:40px;"></span>
 </a>
 <nav class="mainMenu">
 	<ul>
@@ -100,4 +101,4 @@
 	</ul>
 </nav>
 
-	<div class='container theme-showcase' role='main'>
+	<div class='container theme-showcase' role='main' id="main">

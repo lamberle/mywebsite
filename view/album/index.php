@@ -12,6 +12,7 @@ if(is_admin()) {
 	</form>
 	<div>';
 }
+	echo "<center>";
 			foreach($data as $album) {
 				$imgs = $album->getImages();
 				
@@ -30,5 +31,6 @@ if(is_admin()) {
 				
 
 			}
+		echo "</center>";
 	?>
 	</div>

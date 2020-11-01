@@ -19,8 +19,9 @@ body {
   margin-bottom: 5vh;
 }
 @media (max-width:767px) {
-  .theme-showcase {
-    margin-left: 5vw; 
+  #main {
+    margin-left: 0vw;
+    margin-right: 0vw; 
   }
 }
 .black-bg {
@@ -33,7 +34,7 @@ body {
   z-index: 101;
 }
 .logo{
-
+  margin-left:-23px;
 }
 .logo a{
   text-decoration: none;
