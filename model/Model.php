@@ -24,7 +24,7 @@ class Model {
 			$sql = "select * from `$table` where $table"."_id=$id";
 			$st = db_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.db_error());
 
-			if (mysql_num_rows($st) != 1) {
+			if (db_num_rows($st) != 1) {
 				throw new Exception("Not in table: ".$table." id: ".$id );
 			} else {
 				
