@@ -10,11 +10,11 @@ class Image extends Model {
 
 	public function delete() {
 		$sql = "delete from `image` where image_id=".$this->image_id;
-		if(!mysql_query($sql)) {
+		if(!db_query($sql)) {
 			throw new Exception();
 		}
 		$sql = "delete from `album_image` where image_id=".$this->image_id;
-		if(!mysql_query($sql)) {
+		if(!db_query($sql)) {
 			throw new Exception();
 		}
 		if($this->image_url != "ressources/dummy.png") {

@@ -52,10 +52,6 @@ class ImageController extends Controller {
 			          $image->image_description = "";
 			          $image->image_url = $path;
 			          image_resize($path, $preview, 500, 500, 0);
-			          $i = new Imagick($preview);
-					  autoRotateImage($preview);
-					   // - Do other stuff to the image here -
-					  $i->writeImage($preview);
 			          $image->image_preview_url = $preview;
 			          $images[] = $image;
 			     }
