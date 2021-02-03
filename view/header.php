@@ -101,4 +101,4 @@
 	</ul>
 </nav>
 
-	<div class='container theme-showcase' role='main' id="main">
+	<div class='theme-showcase' role='main' id="main">

@@ -258,6 +258,34 @@ label{
 }
 
 /* IMAGES */
+.filter {
+    border: 1px solid black;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 15px;
+    padding: 5px;
+}
+.filter:hover {
+  cursor: pointer;
+}
+.tag {
+    border: 1px solid black;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 15px;
+    padding: 5px;
+}
+.tag:hover {
+  cursor: pointer;
+}
+.selected-tag {
+  background-color:black;
+  color:white;
+}
+.selected-filter {
+  background-color:black;
+  color:white;
+}
 .img-row {
   display: block;
   width: 90%
@@ -421,4 +449,22 @@ div.album-thumbnail:hover {
     font-style: italic;
     font-weight: bold;
     color: #00bbcc;
+}
+.progress-bar-primary{
+  width:0px;
+}
+
+.skills {
+  float:right;
+  width:30%;
+}
+#resume {
+  float:left;
+  width:70%;
+}
+.card{
+  margin-bottom: 40px;
+}
+.progress .progress-bar{
+  background-color: #74a0c5;
 }
