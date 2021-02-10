@@ -26,12 +26,12 @@
     });
 </script>
 <div class="skills" id="skills">
-  <div>
+  <div class="skills-div">
     <div class="h3 mb-4 title">Data Engineer Skills</div>
     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="card-body">
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">Python</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="90" w="95%"></div><span class="progress-value"></span>
@@ -40,7 +40,7 @@
           </div>
           </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">PySpark</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="95%"></div><span class="progress-value"></span>
@@ -49,7 +49,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">ElasticSearch</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="95%"></div><span class="progress-value"></span>
@@ -58,7 +58,7 @@
           </div>
           </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">SQL</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="95%"></div><span class="progress-value"></span>
@@ -67,7 +67,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">Airflow</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="95%"></div><span class="progress-value"></span>
@@ -76,7 +76,7 @@
           </div>
           </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">AWS S3</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="95%"></div><span class="progress-value"></span>
@@ -90,7 +90,7 @@
     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="card-body">
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">PHP</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="90%"></div><span class="progress-value"></span>
@@ -99,7 +99,7 @@
           </div>
           </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">HTML</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="95%"></div><span class="progress-value"></span>
@@ -108,7 +108,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">CSS</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="90%"></div><span class="progress-value"></span>
@@ -117,7 +117,7 @@
           </div>
           </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">JS</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="90%"></div><span class="progress-value"></span>
@@ -131,7 +131,7 @@
     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="card-body">
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">C#</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="80%"></div><span class="progress-value"></span>
@@ -140,7 +140,7 @@
           </div>
           </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">Java</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="80%"></div><span class="progress-value"></span>
@@ -149,7 +149,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">R</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="70%"></div><span class="progress-value"></span>
@@ -158,7 +158,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">Matlab</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="70%"></div><span class="progress-value"></span>
@@ -172,7 +172,7 @@
     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="card-body">
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">French</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="90" w="100%"></div><span class="progress-value"></span>
@@ -181,7 +181,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">English</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="95%"></div><span class="progress-value"></span>
@@ -190,7 +190,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="">
             <div class="progress-container progress-primary"><span class="progress-badge">Italian</span>
               <div class="progress">
                 <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" w="70%"></div><span class="progress-value"></span>
@@ -226,7 +226,7 @@
                 </li>
                 <li class="timeline-item">
                     <div class="timeline-info">
-                        <span>September 2019 / February 2020</span>
+                        <span>Sep 2019 / Feb 2020</span>
                     </div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
@@ -237,7 +237,7 @@
                 </li>
                 <li class="timeline-item">
                     <div class="timeline-info">
-                        <span>September 2017 / February 2018</span>
+                        <span>Sep 2017 / Feb 2018</span>
                     </div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
@@ -277,7 +277,7 @@
                 </li>
                 <li class="timeline-item">
                     <div class="timeline-info">
-                        <span>September 2018 / February 2019</span>
+                        <span>Sep 2018 / Feb 2019</span>
                     </div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
