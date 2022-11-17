@@ -21,6 +21,9 @@
 			echo '<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">';
 			echo '<link rel="stylesheet" type="text/css" href="./css/resume.css" />';
 		}
+		if(isset(parameters()["r"]) && parameters()["r"] == "image") {
+			echo '<link rel="stylesheet" type="text/css" href="./css/images.css" />';
+		}
 	?>
 	<script src="https://use.typekit.net/bkt6ydm.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>

@@ -1,0 +1,31 @@
+/*.img-mini {
+	display: inline-block;
+	height: 200px;
+}
+.img-mini-div {
+	margin-top:10px;
+	margin-left:10px;
+	display: inline-block;
+}*/
+#filtered-pictures {
+	display: none;
+}
+
+.img-mini {
+	/*max-height: 400px;*/
+}
+
+.tag {
+    border: 1px solid black;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 15px;
+    padding: 8px;
+}
+.tag:hover {
+  cursor: pointer;
+}
+.selected-tag {
+  background-color:black;
+  color:white;
+}

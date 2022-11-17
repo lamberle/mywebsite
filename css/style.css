@@ -268,20 +268,7 @@ label{
 .filter:hover {
   cursor: pointer;
 }
-.tag {
-    border: 1px solid black;
-    margin: 5px;
-    display: inline-block;
-    border-radius: 15px;
-    padding: 5px;
-}
-.tag:hover {
-  cursor: pointer;
-}
-.selected-tag {
-  background-color:black;
-  color:white;
-}
+
 .selected-filter {
   background-color:black;
   color:white;
@@ -443,51 +430,3 @@ div.album-thumbnail:hover {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 }
-
-/*********** RESUME ********/
-.resume-company {
-    font-style: italic;
-    font-weight: bold;
-    color: #00bbcc;
-}
-.progress-bar-primary{
-  width:0px;
-}
-
-.skills {
-  float:right;
-  width:30%;
-}
-.skills-div {
-  background: #f2f2f2;
-  padding: 15px;
-  border-radius: 20px;
-  max-width: 300px;
-}
-#resume {
-  float:left;
-  width:70%;
-}
-.card{
-  margin-bottom: 40px;
-}
-.progress .progress-bar{
-  background-color: #74a0c5;
-}
-
-.card-body .row{
-  margin-left: 0px;
-  margin-right: 0px;
-}
-@media (max-width:1240px) { 
-   .skills{
-    display: block;
-    width:100%;
-    float:none;
-   }
-   .skills-div {
-    max-width: 500px;
-    background: none;
-    margin: auto;
-   }
-  }

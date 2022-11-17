@@ -1,9 +1,11 @@
 var x = 4;
 
 function display_image(im, rm="none") {
-	if(im.length > 0) {	
+	if(im.length > 0) {
+		console.log(im);
 	  	im.addClass("img-view");
 	  	im.attr("src", im.attr("alt"));
+	  	console.log(im);
 	  	if(rm == "last") {
 	  		$(".img-view").last().removeClass("img-view");
 	  	}
@@ -12,6 +14,13 @@ function display_image(im, rm="none") {
 	  	}
   	}
 }
+function exit_display() {
+	  	$(".img-view").removeClass("img-view");
+	  	$('#previous').remove();
+	  	$('#next').remove();
+		$('.black-bg').remove();
+}
+
 $(document).ready(function(){
 	$(".img-mini").mouseenter(function() {
 		var w = $(this).width();
@@ -28,29 +37,32 @@ $(document).ready(function(){
 		$(this).css( { "margin-left" : "0px", "margin-top" : "0px" } );
 	});
   	$("body").on('click','#previous',function() {
-	  	var prev = $(".img-view").prev(".img-hidden");
-	  	console.log(prev)
-	  	display_image(prev, "last")
+  		var id = $(".img-view").attr("id").substring(5);
+  		var prev_id = $("div.pictures > .tjGalleryItem > #preview_" + id).parent().prev().children().attr("id").substring(8);
+	  	display_image($("#full_" + prev_id), "last");
   	});
 	$("body").on('click','#next',function() {
-		var next = $(".img-view").next(".img-hidden");
-	  	display_image(next, "first")
+  		var id = $(".img-view").attr("id").substring(5);
+  		var next_id = $("div.pictures > .tjGalleryItem > #preview_" + id).parent().next().children().attr("id").substring(8);
+	  	display_image($("#full_" + next_id), "first");
 	});
 	$(".img-mini" ).click(function() {
 	  var id = $(this).attr('id').split("_")[1];
 	  display_image($('#full_' + id))
 	  var div = document.createElement("div");
 	  div.className='black-bg';
-	  $("body").append(div).on('click','.black-bg',function() {
-	  	$(".img-view").removeClass("img-view");
-	  	$('#previous').remove();
-	  	$('#next').remove();
-		$(this).remove();
-	  });
+	  $("body").append(div).on('click','.black-bg',exit_display);
 
 	  $('body').append("<img id='previous' src='ressources/previous.png' class='arrow arrow-left'>");
 
   	  $('body').append("<img id='next' src='ressources/next.png' class='arrow arrow-right'>");
 
+	});
+
+	$(document).on('keypress',function(e) {
+		console.log(e.key);
+	    if(e.key === "Escape") {
+	        exit_display();
+	    }
 	});
 });
