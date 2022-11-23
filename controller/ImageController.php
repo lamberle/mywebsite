@@ -77,6 +77,7 @@ class ImageController extends Controller {
 				$image = new Image(parameters()["image_id"][$i]);
 				$image->image_title = parameters()["image_title"][$i];
 				$image->image_description = parameters()["image_description"][$i];
+				$image->addTags(parameters()["tags"][$i]);
 				$images[] = $image;
 			}
 			$this->index();
