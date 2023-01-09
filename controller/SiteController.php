@@ -15,6 +15,9 @@ class SiteController extends Controller {
 	public function resume() {
 		$this->render("resume");
 	}
+	public function projects() {
+		$this->render("projects");
+	}
 	public function register() {
 		if(isset(parameters()['register'])) {
 			if(!empty(parameters()['pseudo']) && !empty(parameters()['email']) && !empty(parameters()['password'])) {
@@ -54,6 +57,7 @@ class SiteController extends Controller {
 		unset($_SESSION["user"]);
 		$this->index();
 	}
+
 }
 
 

@@ -15,14 +15,16 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 	<link rel="stylesheet" type="text/css" href="./css/menu.css" />
 	<link rel="stylesheet" type="text/css" href="./css/polaroid.css" />
-	<link rel="stylesheet" type="text/css" href="./css/about.css" />
 	<?php
 		if(isset(parameters()["r"]) && parameters()["r"] == "site/resume") {
 			echo '<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">';
 			echo '<link rel="stylesheet" type="text/css" href="./css/resume.css" />';
-		}
-		if(isset(parameters()["r"]) && parameters()["r"] == "image") {
+		} elseif(isset(parameters()["r"]) && parameters()["r"] == "site/projects") {
+			echo '<link rel="stylesheet" type="text/css" href="./css/projects.css" />';
+		} elseif(isset(parameters()["r"]) && parameters()["r"] == "image") {
 			echo '<link rel="stylesheet" type="text/css" href="./css/images.css" />';
+		} elseif(isset(parameters()["r"]) && parameters()["r"] == "site") {
+			echo '<link rel="stylesheet" type="text/css" href="./css/about.css" />';
 		}
 	?>
 	<script src="https://use.typekit.net/bkt6ydm.js"></script>
@@ -47,13 +49,14 @@
 <body>
 	<?php
 		$options = [
-		    "site" => "About",
-		    "album" => "Albums",
-		    "image" => "Images",
+		    "site" => "Home",
+		    "image" => "Photography",
+		    "site/projects" => "Projects",
 		    "site/resume" => "Experiences",
 		];
 	?>
-	<div class="rzm_profile_nav">
+	<!-- <div class="rzm_profile_nav"> -->
+	<div class="rzm_profile_nav" <?php if(isset(parameters()["r"]) && parameters()["r"] == "site"){echo 'style="display:none;"';}?>>
            <div class="sticky">
 	           	<div class="logo">
 	            	<img src="ressources/profile5.png" alt="profile_photo" class="img-circle">
@@ -85,11 +88,11 @@
     
     </div>
  <!-- MOBILE MENU -->
-<a href="#" class="menuBtn">
+<a href="#" class="menuBtn" <?php if(isset(parameters()["r"]) && parameters()["r"] == "site"){echo 'style="display:none;"';}?>>
 	<img src="ressources/profile5.png" alt="profile_photo" class="img-circle mobile-menu">
 	<span class="lines" style="top:40px;"></span>
 </a>
-<nav class="mainMenu">
+<nav class="mainMenu" <?php if(isset(parameters()["r"]) && parameters()["r"] == "site"){echo 'style="display:none;"';}?>>
 	<ul>
    		<?php
 			foreach ($options as $key => $value) {
@@ -104,4 +107,5 @@
 	</ul>
 </nav>
 
-	<div class='theme-showcase' role='main' id="main">
+	<div class='theme-showcase' role='main' id="main" <?php if(isset(parameters()["r"]) && parameters()["r"] == "site"){echo 'style="display:none;"';}?>>
+		<?php if(isset(parameters()["r"]) && parameters()["r"] == "site"){echo '</div>';}?>

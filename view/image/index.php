@@ -30,11 +30,14 @@
 		</div>';
 	} else {
 		echo '<script src="js/display_image.js"></script>';
+		foreach(Tag::findAll() as $tag) {
+			echo '<p class="tags" id="'.$tag->tag_id.'">'.$tag->tag_name.'</p>';
+		}
 	}
-	foreach($data as $image) {
-		echo '<div class="thumbnail" id="img_'.$image->image_id.'">';
-		echo '<img class="img-mini-square" src="'.$image->image_preview_url.'" alt="'.$image->image_title.'">';
-		echo '<img class="img-hidden" id="'.$image->image_id.'" src="'.$image->image_url.'" alt="'.$image->image_title.'">';
-		echo '</div>';
-	}
+	// foreach($data as $image) {
+	// 	echo '<div class="thumbnail" id="img_'.$image->image_id.'">';
+	// 	echo '<img class="img-mini-square" src="'.$image->image_preview_url.'" alt="'.$image->image_title.'">';
+	// 	echo '<img class="img-hidden" id="'.$image->image_id.'" src="'.$image->image_url.'" alt="'.$image->image_title.'">';
+	// 	echo '</div>';
+	// }
 	?>
