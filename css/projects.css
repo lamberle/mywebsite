@@ -1,22 +1,56 @@
+h1 {
+  margin-top:20px;
+  font-size: 40px;
+}
+
 .collapsible {
-  background-color: #eee;
-  color: #444;
+  font-size: 20px;
+    font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  background-color: #8c8c8c;
+  color: black;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  margin-top: 10px;
 }
 
 .active, .collapsible:hover {
-  background-color: #ccc;
+  background-color: #6191d0;
 }
 
 .collapsible_div {
-  padding: 0 18px;
+  text-align: justify;
+  padding: 18px;
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
+}
+
+.content {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.project-img {
+  display:inline-block;
+  max-height: 300px;
 }
