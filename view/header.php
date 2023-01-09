@@ -23,7 +23,7 @@
 			echo '<link rel="stylesheet" type="text/css" href="./css/projects.css" />';
 		} elseif(isset(parameters()["r"]) && parameters()["r"] == "image") {
 			echo '<link rel="stylesheet" type="text/css" href="./css/images.css" />';
-		} elseif(isset(parameters()["r"]) && parameters()["r"] == "site") {
+		} elseif(isset(parameters()["r"]) && parameters()["r"] == "site" || !isset(parameters()["r"])) {
 			echo '<link rel="stylesheet" type="text/css" href="./css/about.css" />';
 		}
 	?>
@@ -56,7 +56,7 @@
 		];
 	?>
 	<!-- <div class="rzm_profile_nav"> -->
-	<div class="rzm_profile_nav" <?php if(isset(parameters()["r"]) && parameters()["r"] == "site"){echo 'style="display:none;"';}?>>
+	<div class="rzm_profile_nav" <?php if(isset(parameters()["r"]) && parameters()["r"] == "site" || !isset(parameters()["r"])){echo 'style="display:none;"';}?>>
            <div class="sticky">
 	           	<div class="logo">
 	            	<img src="ressources/profile5.png" alt="profile_photo" class="img-circle">
@@ -88,11 +88,11 @@
     
     </div>
  <!-- MOBILE MENU -->
-<a href="#" class="menuBtn" <?php if(isset(parameters()["r"]) && parameters()["r"] == "site"){echo 'style="display:none;"';}?>>
+<a href="#" class="menuBtn" <?php if(isset(parameters()["r"]) && parameters()["r"] == "site" || !isset(parameters()["r"])){echo 'style="display:none;"';}?>>
 	<img src="ressources/profile5.png" alt="profile_photo" class="img-circle mobile-menu">
 	<span class="lines" style="top:40px;"></span>
 </a>
-<nav class="mainMenu" <?php if(isset(parameters()["r"]) && parameters()["r"] == "site"){echo 'style="display:none;"';}?>>
+<nav class="mainMenu" <?php if(isset(parameters()["r"]) && parameters()["r"] == "site" || !isset(parameters()["r"])){echo 'style="display:none;"';}?>>
 	<ul>
    		<?php
 			foreach ($options as $key => $value) {
@@ -107,5 +107,5 @@
 	</ul>
 </nav>
 
-	<div class='theme-showcase' role='main' id="main" <?php if(isset(parameters()["r"]) && parameters()["r"] == "site"){echo 'style="display:none;"';}?>>
-		<?php if(isset(parameters()["r"]) && parameters()["r"] == "site"){echo '</div>';}?>
+	<div class='theme-showcase' role='main' id="main" <?php if(isset(parameters()["r"]) && parameters()["r"] == "site" || !isset(parameters()["r"])){echo 'style="display:none;"';}?>>
+		<?php if(isset(parameters()["r"]) && parameters()["r"] == "site" || !isset(parameters()["r"])){echo '</div>';}?>
