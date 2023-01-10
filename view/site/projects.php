@@ -48,7 +48,7 @@
 
 <button type="button" class="collapsible">Engineering ethics</button>
 <div class="collapsible_div">
-  <p>During my last semester at Université de Technologies de Compiègne (UTC) in 2019 I chose to take an engeneering ethics class during which I, along with 2 classmates, had to choose a subject and study its ethical implications.<br/> The subject we chose was <b>Ethics of energy transition through the wind power sector</b>. Here is our report that got us our class's highest grade: <a href="ressources/files/Rapport_PH09_Hugo_Foraison_Adam_Potdevin_Leo_Lambert.pdf" download>download</a></p>
+  <p>During my last semester at Université de Technologies de Compiègne (UTC) in 2019 I chose to take an engeneering ethics class during which I, along with 2 classmates, had to choose a subject and study its ethical implications.<br/> The subject we chose was <b>Ethics of energy transition through the wind power sector</b>. Here is our report (in french) that got us our class's highest grade: <a class="button" href="ressources/files/Rapport_PH09_Hugo_Foraison_Adam_Potdevin_Leo_Lambert.pdf" download>download PDF</a></p>
 </div>
 
 <button type="button" class="collapsible">Converted van</button>
@@ -58,7 +58,23 @@
   <img src="ressources/fixed_images/camion2.png" alt="profile_photo" class="project-img">
   <img src="ressources/fixed_images/camion3.png" alt="profile_photo" class="project-img">
   <img src="ressources/fixed_images/camion4.png" alt="profile_photo" class="project-img">
+  <img src="ressources/fixed_images/camion7.jpg" alt="profile_photo" class="project-img">
   <img src="ressources/fixed_images/camion5.png" alt="profile_photo" class="project-img">
   <img src="ressources/fixed_images/camion6.png" alt="profile_photo" class="project-img">
+
+</div>
+
+<button type="button" class="collapsible">Flat renovation</button>
+<div class="collapsible_div">
+  <p>After acquiring a flat I made some renovation, including paint, tiling, changing a sink, plumbing, restoring wood workplan and wood stairs, building a composter... And more to come !</p><br/>
+  <img src="ressources/fixed_images/appart1.jpg" alt="profile_photo" class="project-img">
+  <img src="ressources/fixed_images/appart2.jpg" alt="profile_photo" class="project-img">
+  <img src="ressources/fixed_images/appart3.jpg" alt="profile_photo" class="project-img">
+  <img src="ressources/fixed_images/appart4.jpg" alt="profile_photo" class="project-img">
+  <img src="ressources/fixed_images/appart5.jpg" alt="profile_photo" class="project-img">
+  <img src="ressources/fixed_images/appart6.jpg" alt="profile_photo" class="project-img">
+  <img src="ressources/fixed_images/appart7.jpg" alt="profile_photo" class="project-img">
+  <img src="ressources/fixed_images/appart8.jpg" alt="profile_photo" class="project-img">
+
 
 </div>
